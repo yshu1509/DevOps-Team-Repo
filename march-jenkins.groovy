@@ -10,13 +10,14 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh'mvn clean -f pom.xml'
+            }
+        }
+         stage('Build') {
+            steps {
                 sh'mvn package -f pom.xml'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy Application Code'
-            }
         }
     }
 }
