@@ -6,8 +6,7 @@ pipeline {
             steps {
                 git 'https://github.com/ramdevops03/Development-Team-Repo.git'
             }
-        }
-        stage('Build') {
+        }        stage('Build') {
             steps {
                 sh 'mvn package -f pom.xml'
             }
