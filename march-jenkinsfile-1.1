@@ -9,12 +9,12 @@ pipeline {
         }        
         stage('Build') {
             steps {
-                sh 'mvn package -f pom.xml'
+                sh 'mvn clean -f pom.xml'
             }
         }
-        stage('Deploy') {
+         stage('Build') {
             steps {
-                echo 'Deploy Application Code'
+                sh 'mvn package -f pom.xml'
             }
         }
     }
