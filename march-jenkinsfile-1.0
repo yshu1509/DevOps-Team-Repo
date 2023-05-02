@@ -3,19 +3,14 @@ pipeline {
 
     stages {
         stage('Clone Application Code') {
-            steps {
-                echo 'Cloning Application code from GITHUB'
+            it'https://github.com/yshu1509/Development-Team-Repo.git'
             }
         }
         stage('Build') {
             steps {
-                echo 'Build Application Code'
+                sh'mvn clean -f pom.xml'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy Application Code'
-            }
         }
     }
 }
