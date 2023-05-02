@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Application Code') {
             steps {
-                
+               
                git'https://github.com/yshu1509/Development-Team-Repo.git'
             }
         }
