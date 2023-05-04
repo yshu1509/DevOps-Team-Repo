@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Application Code') {
             steps {
-                sh 'mvn package -f pom.xml'
+                sh 'mvn clean -f pom.xml'
             }
         }
         stage('Pushing to artifactory'){
