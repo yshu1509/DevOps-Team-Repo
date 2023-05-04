@@ -3,7 +3,7 @@ pipeline {
     parameters{
             choice(name:'VERSION' , choices: ['1.0', '1.1', '1.2'])
             booleanParam(name: 'Run', defaultValue: true)
-
+    }
     stages {
         stage('Git Clone') {
             steps {
