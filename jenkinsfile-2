@@ -12,7 +12,7 @@ pipeline {
                 sh 'mvn clean -f pom.xml'
             }
         }
-        tage('deploy') {
+        stage('deploy') {
             steps {
                 sh 'application code is deploy'
             }
