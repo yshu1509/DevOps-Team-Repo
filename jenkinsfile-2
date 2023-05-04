@@ -12,10 +12,5 @@ pipeline {
                 sh 'mvn clean -f pom.xml'
             }
         }
-        stage('deploy') {
-            steps {
-                sh 'application code is deploy'
-            }
-        }
      }
   }
