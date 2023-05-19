@@ -18,7 +18,7 @@ pipeline {
         
          stage('Upload Artifact to Nexus') {
             steps {
-                nexusArtifactUploader credentialsId: 'nexuskey', groupId: 'project', nexusUrl: '3.16.29.121:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'maven-releases', version: '2.3'
+                nexusArtifactUploader artifacts: [[artifactId: 'web', classifier: '', file: 'target/web.war', type: 'war']], credentialsId: 'nexuskey', groupId: 'project', nexusUrl: '3.16.29.121:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'maven-releases', version: '2.3'
             }
         }
         stage('deploy') {
